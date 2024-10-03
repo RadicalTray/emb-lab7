@@ -19,9 +19,3 @@ uploadfs:
 
 update:
 	pio -f -c vim update
-
-recv:
-	python recv.py
-
-send:
-	python send.py

@@ -12,7 +12,7 @@ h = hashlib.new('md5')
 h.update(datagen)
 print('MD5 is :', h.hexdigest())
 
-ser = serial.Serial('/dev/ttyUSB1', 9600)
+ser = serial.Serial('/dev/ttyUSB1', 115200)
 
 batchSize = 1024
 i = 0

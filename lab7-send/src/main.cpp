@@ -2,7 +2,7 @@
 
 SoftwareSerial destSerial(17, 16);
 
-constexpr int myBaudRate = 9600;
+constexpr int myBaudRate = 115200;
 constexpr int theirBaudRate = myBaudRate;
 
 void setup() {
