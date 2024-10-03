@@ -3,7 +3,7 @@ import time
 import hashlib
 
 # N = 1_000_000
-N = 10_000
+N = 100_000
 
 h = hashlib.new('md5')
 ser = serial.Serial('/dev/ttyUSB0', 9600)
@@ -20,5 +20,7 @@ h.update(data)
 print(f'Data length is {len(data)}\nMD5 is : {h.hexdigest()}')
 print('Total time is :', stoptime - starttime)
 
-file = open('output', 'w')
+file = open('recv_data', 'w')
+print(h.hexdigest(), file=file)
+print()
 print(data, file=file)
