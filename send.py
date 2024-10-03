@@ -21,9 +21,10 @@ while i < N:
     print(batch)
     ser.write(batch)
     i += len(batch)
-    time.sleep(0.5)
+    time.sleep(0.1)
 
-file = open('send_data', 'w')
-print(h.hexdigest(), file=file)
-print()
-print(datagen, file=file)
+hash_dump = open('send.md5', 'w')
+print(h.hexdigest(), file=hash_dump)
+
+data_dump = open('send_data', 'wb')
+print(datagen, file=data_dump)

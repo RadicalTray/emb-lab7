@@ -20,7 +20,8 @@ h.update(data)
 print(f'Data length is {len(data)}\nMD5 is : {h.hexdigest()}')
 print('Total time is :', stoptime - starttime)
 
-file = open('recv_data', 'w')
-print(h.hexdigest(), file=file)
-print()
-print(data, file=file)
+hash_dump = open('recv.md5', 'w')
+print(h.hexdigest(), file=hash_dump)
+
+data_dump = open('recv_data', 'wb')
+print(data, file=data_dump)
