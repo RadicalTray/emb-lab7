@@ -6,7 +6,7 @@ import hashlib
 N = 1_000
 
 h = hashlib.new('md5')
-ser = serial.Serial('/dev/ttyUSB0', 115200)
+ser = serial.Serial('/dev/ttyUSB0', 9600)
 ser.flush()
 data = ser.read(1)
 starttime = time.time()
