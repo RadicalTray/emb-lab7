@@ -1,1 +1,1 @@
-../lab7-recv/recv.py
+../recv.py

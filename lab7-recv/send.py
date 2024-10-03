@@ -1,1 +1,1 @@
-../lab7-send/send.py
+../send.py
