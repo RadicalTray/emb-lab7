@@ -1,19 +1,17 @@
-#include <SoftwareSerial.h>
+#include <Arduino.h>
 
-SoftwareSerial srcSerial(17, 16);
+#define RXD1 (16)
+#define TXD1 (17)
 
-constexpr int myBaudRate = 9600;
-constexpr int theirBaudRate = myBaudRate;
+constexpr int baudrate = 115200;
 
 void setup() {
-  Serial.begin(myBaudRate);
-  srcSerial.begin(theirBaudRate);
-  Serial.print("Hi!");
+  Serial.begin(baudrate);
+  Serial1.begin(baudrate, SERIAL_8N1, RXD1, TXD1);
 }
 
 void loop() {
-  while (srcSerial.available()) {
-    char b = srcSerial.read();
-    Serial.write(b);
+  if (Serial1.available()) {
+    Serial.write(Serial1.read());
   }
 }
