@@ -3,7 +3,7 @@ import time
 import hashlib
 
 # N = 1_000_000
-N = 1_000
+N = 100_000
 
 h = hashlib.new('md5')
 ser = serial.Serial('/dev/ttyUSB0', 115200)

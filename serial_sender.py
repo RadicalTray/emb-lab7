@@ -10,7 +10,7 @@ h.update(datagen)
 print('MD5 is :', h.hexdigest())
 # Change the device here for Windows, it would be COM....  for Mac, I have no idea
 # The second argument is baudrate
-ser = serial.Serial('/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller-if00-port0', 1000000) 
+ser = serial.Serial('/dev/ttyUSB1', 115200)
 
 ser.write(datagen)
 

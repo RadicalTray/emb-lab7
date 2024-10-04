@@ -4,7 +4,7 @@ from random import randbytes
 import time
 
 # N = 1_000_000
-N = 1_000
+N = 100_000
 
 datagen = randbytes(N)
 
